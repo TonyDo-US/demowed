@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="container col-md-8 mt-4">
+ <div class="row">
+   <div class="col mt-5 text-center">
+      <h1 class="text text-danger">{{ teacher.name }}</h1>
+      <h2 class="text text-primary">DOB: {{ teacher.date | date('d-m-Y') }}</h2>
+      <h2 class="text text-primary">Email: {{ teacher.email }}</h2>
+   </div>
+ </div>
+</div>
+{% endblock %}

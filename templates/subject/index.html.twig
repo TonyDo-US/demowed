@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container"
+		
+		
+
+		<div class="container col-md-5 mt-4 text-center">
+			<h4 class="card-title">Room Lists 
+				<a href="{{ path ('class_add') }}" class="btn btn-primary float-right py-2"> ADD</a>
+			</h4>
+
+            
+
+			<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>subjectNo</th>
+					<th>subjectSlots</th>
+					<th>Delete</th>
+					<th>Detail</th>
+				</tr>
+			</thead>
+			{% for s  in subject %}
+			<tbody>
+				<tr>
+					<th scope="row">>{{ s.name }}</th>
+					<td>{{ s.subjectNo }}</td>
+					<td>{{ s.subjectSlots }}</td>
+					<td><a href="{{ path('subject_delete' , { 'id': s.id }) }}">
+							Delete
+						</a></td>
+					<td><a href="{{ path('subject_detail' , { 'id': s.id }) }}">
+							Detail
+						</a></td>
+						
+				</tr>
+	
+			
+        {% endfor %}
+			</table>
+		
+	</div>
+	</div>
+</div>
+
+{% endblock %}

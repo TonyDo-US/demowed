@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+ <div class="cotainer">
+    <div class="container-fluid bg-1 text-center">
+    <h3>Class Name: {{ class.no }}</h3>
+    <h3>Time: {{ class.time| date('d-m-Y') }}</h3>
+    <h3>Teacher :{{ class.relation.name }}</h3>
+    <h3>Subject No:{{ class.subject.subjectNo }}</h3>
+    
+  </div>
+ </div>
+{% endblock %}
